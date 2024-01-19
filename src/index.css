@@ -29,9 +29,9 @@ body {
   background-size: cover;
   background-position: center;
 }
-/* 2 */
+
 header {
-  margin: 1rem 0;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -52,7 +52,6 @@ header h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  /* text-fill-color: transparent; */
 }
 
 #last-try {

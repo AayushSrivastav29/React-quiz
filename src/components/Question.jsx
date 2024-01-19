@@ -1,6 +1,7 @@
+import { useState } from "react";
+
 import QuestionTimer from "./QuestionTimer.jsx";
 import Answers from "./Answers.jsx";
-import { useState } from "react";
 import QUESTIONS from "../questions.js";
 
 export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
@@ -10,9 +11,11 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
   });
 
   let timer = 10000;
+
   if (answer.selectedAnswer) {
     timer = 1000;
   }
+
   if (answer.isCorrect !== null) {
     timer = 2000;
   }
@@ -36,11 +39,13 @@ export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
   }
 
   let answerState = "";
+
   if (answer.selectedAnswer && answer.isCorrect !== null) {
     answerState = answer.isCorrect ? "correct" : "wrong";
   } else if (answer.selectedAnswer) {
     answerState = "answered";
   }
+
   return (
     <div id="question">
       <QuestionTimer

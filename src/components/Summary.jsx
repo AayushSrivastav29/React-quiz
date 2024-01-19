@@ -16,7 +16,7 @@ export default function Summary({ userAnswers }) {
   const wrongAnswersShare = 100 - skippedAnswersShare - correctAnswersShare;
 
   return (
-    <div id="Summary">
+    <div id="summary">
       <img src={quizCompleteImg} alt="Trophy icon" />
       <h2>Quiz Completed!</h2>
       <div id="summary-stats">
@@ -39,7 +39,7 @@ export default function Summary({ userAnswers }) {
 
           if (answer === null) {
             cssClass += " skipped";
-          } else if (answer == QUESTIONS[index].answers[0]) {
+          } else if (answer === QUESTIONS[index].answers[0]) {
             cssClass += " correct";
           } else {
             cssClass += " wrong";
